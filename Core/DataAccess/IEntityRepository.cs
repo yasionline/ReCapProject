@@ -6,12 +6,12 @@ using System.Text;
 
 namespace Core.DataAccess
 {
-    public interface IEntityRepository<Y> where Y:class,IEntity,new()
+    public interface IEntityRepository<T> where T:class,IEntity,new()
     {
-        List<Y> GetAll(Expression<Func<Y, bool>> filter = null);
-        Y Get(Expression<Func<Y, bool>> filter);
-        void Add(Y entity);
-        void Update(Y entity);
-        void Delete(Y entity);
+        List<T> GetAll(Expression<Func<T, bool>> filter = null);
+        T Get(Expression<Func<T, bool>> filter);
+        void Add(T entity);
+        void Update(T entity);
+        void Delete(T entity);
     }
 }
