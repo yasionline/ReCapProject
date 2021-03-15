@@ -15,5 +15,9 @@ namespace Business.Constants
         public static string InvalidNumber = "Geçersiz sayı";
         public static string ColorsListed = "Renkler listelendi";
         public static string BrandsListed = "Markalar listelendi";
+        public static string CarUpdated = "Araba güncellendi";
+        public static string CarDeleted = "Araba silindi";
+        public static string ColorUpdated = "Renk güncellendi";
+        public static string BrandUpdated = "Marka güncellendi";
     }
 }
