@@ -23,7 +23,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Rentel>> GetAll()
         {
-            return new SuccesDataResult<List<Rentel>>(_rentelDal.GetAll(), "Rentel Listelendi");
+            return new SuccessDataResult<List<Rentel>>(_rentelDal.GetAll(), "Rentel Listelendi");
         }
     }
 }

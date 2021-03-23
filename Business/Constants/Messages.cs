@@ -19,5 +19,10 @@ namespace Business.Constants
         public static string CarDeleted = "Araba silindi";
         public static string ColorUpdated = "Renk güncellendi";
         public static string BrandUpdated = "Marka güncellendi";
+        public static string AuthorizationDenied = "Yetkiniz yok.";
+        public static string CarImageUpdated = "Araba resmi güncellendi";
+        public static string CarImageDeleted = "Araba resmi silindi";
+        public static string CarImageAdded = "Araba resmi eklendi";
+        public static string ImageLimitExceded = "Resim sayısı 5'den büyük olamaz";
     }
 }
