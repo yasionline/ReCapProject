@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -15,6 +16,8 @@ namespace Business.Concrete
         {
             _rentelDal = rentelDal;
         }
+
+        [SecuredOperation("rental.add,moderator,admin")]
         public IResult Add(Rentel rentel)
         {
             _rentelDal.Add(rentel);

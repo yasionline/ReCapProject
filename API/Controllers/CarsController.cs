@@ -1,25 +1,20 @@
 ﻿using Business.Abstract;
-using Business.Concrete;
-using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CarsController : ControllerBase
+    public class CarsController : Controller
     {
-        ICarService _carService;
+        private readonly ICarService _carService;
+
         public CarsController(ICarService carService)
         {
             _carService = carService;
         }
+
 
         [HttpPost("add")]
         public IActionResult Add(Car car)

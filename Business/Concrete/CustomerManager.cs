@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -16,6 +17,8 @@ namespace Business.Concrete
         {
             _customerDal = customerDal ;
         }
+
+        [SecuredOperation("customer.add,moderator,admin")]
         public IResult Add(Customer customer)
         {
             _customerDal.Add(customer);
