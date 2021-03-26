@@ -19,7 +19,7 @@ namespace Business.Concrete
             _brandDal = brandDal;
         }
 
-        [SecuredOperation("brand.add,moderator,admin")]
+        //[SecuredOperation("brand.add,moderator,admin")]
         public IResult Add(Brand brand)
         {
             _brandDal.Add(brand);
@@ -33,10 +33,10 @@ namespace Business.Concrete
 
         public IDataResult<Brand> GetById(int brandId)
         {
-            return new SuccessDataResult<Brand>(_brandDal.Get(c => c.BrandId == brandId));
+            return new SuccessDataResult<Brand>(_brandDal.Get(c => c.Id == brandId));
         }
 
-        [SecuredOperation("brand.update,moderator,admin")]
+        //[SecuredOperation("brand.update,moderator,admin")]
         public IResult Update(Brand brand)
         {
             _brandDal.Update(brand);

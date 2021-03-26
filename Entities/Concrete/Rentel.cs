@@ -7,10 +7,11 @@ namespace Entities.Concrete
 {
     public class Rentel:IEntity
     {
-        public int RentelId { get; set; }
+        public int Id { get; set; }
         public int CarId { get; set; }
         public int CustomerId { get; set; }
-        public DateTime RentDate { get; set; }
+        public DateTime RentStartDate{ get; set; }
+        public DateTime RentEndDate { get; set; }
         public DateTime ReturnDate { get; set; }
 
     }
